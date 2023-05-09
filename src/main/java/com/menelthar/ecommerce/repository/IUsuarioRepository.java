@@ -3,9 +3,9 @@ package com.menelthar.ecommerce.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.menelthar.ecommerce.model.Producto;
+import com.menelthar.ecommerce.model.Usuario;
 
 @Repository
-public interface ProductoRepository extends JpaRepository<Producto, Integer>{
-	
+public interface IUsuarioRepository extends JpaRepository<Usuario, Integer> {
+
 }
