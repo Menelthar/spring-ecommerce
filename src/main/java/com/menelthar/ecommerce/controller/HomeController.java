@@ -113,11 +113,16 @@ public class HomeController {
 
 	@GetMapping("/getCart")
 	public String getCart(Model model) {
-		
+
 		model.addAttribute("cart", detalles);
 		model.addAttribute("orden", orden);
-		
+
 		return "/usuario/carrito";
 	}
 
+	@GetMapping("/order")
+	public String order() {
+
+		return "usuario/resumenorden";
+	}
 }
