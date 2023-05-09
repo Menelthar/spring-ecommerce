@@ -93,7 +93,7 @@ public class ProductoController {
 		return "redirect:/productos";
 	}
 
-	@GetMapping("/delete/{id}")
+	@GetMapping("/delete/cart/{id}")
 	public String delete(@PathVariable Integer id) {
 
 		Producto p = new Producto();

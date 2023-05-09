@@ -12,16 +12,17 @@
 <title>Spring eCommerce</title>
 
 
-<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
 	rel="stylesheet">
 <link th:href="@{/css/style-features.css}" rel="stylesheet">
+
 
 </head>
 
 <body>
 
 	<!-- Navigation -->
-	<div th:include="administrador/template_admin.html::header"></div>
+	<div th:include="usuario/template_usuario.html::header"></div>
 
 	<!-- Page Content -->
 	<div class="container">
@@ -58,7 +59,9 @@
 									<td th:text="${dorden.precio}"></td>
 									<td th:text="${dorden.cantidad}"></td>
 									<td th:text="${dorden.total}"></td>
-									<td><a href="#" class="btn btn-danger">Quitar</a></td>
+									<td><a
+										th:href="@{/delete/cart/{id} (id=${dorden.producto.id})}"
+										class="btn btn-danger">Quitar</a></td>
 								</tr>
 							</tbody>
 						</table>
@@ -80,12 +83,10 @@
 	<!-- /.container -->
 
 	<!-- Footer -->
-	<div th:include="administrador/template_admin.html::footer"></div>
+	<div th:include="usuario/template_usuario.html::footer"></div>
 
-
-	<!-- Bootstrap core JavaScript -->
-	<script th:src="@{vendor/jquery/jquery.min.js}"></script>
-	<script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 </body>
 
 </html>
