@@ -3,7 +3,8 @@ package com.menelthar.ecommerce.controller;
 import java.io.IOException;
 import java.util.Optional;
 
-import org.slf4j.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -73,10 +74,10 @@ public class ProductoController {
 
 	@PostMapping("/update")
 	public String update(Producto producto, @RequestParam("img") MultipartFile file) throws IOException {
-		
+
 		Producto p = new Producto();
 		p = productoService.get(producto.getId()).get();
-		
+
 		if (file.isEmpty()) {// Cuando se edita el producto pero no se modifica la imagen
 			producto.setImagen(p.getImagen());
 		} else { // Cuando se edita la imagen.

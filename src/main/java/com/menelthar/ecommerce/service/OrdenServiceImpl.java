@@ -25,6 +25,7 @@ public class OrdenServiceImpl implements IOrdenService {
 		return ordenRepository.findAll();
 	}
 
+	@Override
 	public String generarNumeroOrden() {
 		int numero = 0;
 		String numeroConcatenado = "";

@@ -7,5 +7,5 @@ import com.menelthar.ecommerce.model.Producto;
 
 @Repository
 public interface IProductoRepository extends JpaRepository<Producto, Integer>{
-	
+
 }

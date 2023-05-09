@@ -7,5 +7,5 @@ import com.menelthar.ecommerce.model.Orden;
 
 @Repository
 public interface IOrdenRepository extends JpaRepository<Orden, Integer> {
-	
+
 }

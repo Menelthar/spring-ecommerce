@@ -14,15 +14,15 @@ import com.menelthar.ecommerce.service.IProductoService;
 @Controller
 @RequestMapping("/administrador")
 public class AdministradorController {
-	
+
 	@Autowired
 	private IProductoService productoService;
-	
+
 	@GetMapping("")
 	public String home(Model model) {
-		List<Producto> productos = productoService.findAll(); 
+		List<Producto> productos = productoService.findAll();
 		model.addAttribute("productos", productos);
 		return "administrador/home.html";
 	}
-	
+
 }
